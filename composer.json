@@ -1,6 +1,6 @@
 {
   "name": "aleksandrnovoselov/robots-plugin",
-  "type": "october-theme",
+  "type": "october-plugin",
   "description": "Robots.txt generator",
   "require": {
     "composer/installers": "~1.0",
