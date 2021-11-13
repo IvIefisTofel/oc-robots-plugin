@@ -1,4 +1,4 @@
-# [Robots Plugin](https://github.com/IvIefisTofel/oc-robots-plugin) #
+# Robots Plugin
 Robots.txt Generator plugin for OctoberCMS
 
 [![development](https://img.shields.io/badge/state-Ready-success.svg)](https://img.shields.io/badge/state-Ready-success.svg)
