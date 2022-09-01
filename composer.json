@@ -5,6 +5,6 @@
   "require": {
     "composer/installers": "~1.0",
     "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
-    "october/system": "^2.0|^3.0"
+    "october/system": "^2.0"
   }
 }
