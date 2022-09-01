@@ -17,6 +17,7 @@ class BotsAndCrawlers
         'BoardReader',
         'GoogleAuth',
         'Sogou',
+        'U2FsdGVkX1',
     ];
 
     public static function getUserAgentsForRobots(): array
@@ -46,7 +47,7 @@ class BotsAndCrawlers
                 }
             }
 
-            $splitUserAgent = Collection::make(preg_split('/( |;|\(|\))/', $userAgent))->map(function (string &$agent) {
+            $splitUserAgent = Collection::make(preg_split('/( |;|\(|\))/', $userAgent))->map(function (string $agent) {
                 return trim(
                     preg_replace_callback(
                         "(\\\\x([0-9a-f]{2}))i",

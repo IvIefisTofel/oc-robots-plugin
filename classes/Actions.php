@@ -17,14 +17,17 @@ class Actions
             return \App::make(CmsController::class)->run('404');
         }
 
-        return Response::create(
+        return new Response(
             Collection::make(Robots::get('robots'))
                 /** @param array{userAgent: string, action: string, path: string} $robot */
                 ->map(function(array $robot) {
                     return "User-agent: {$robot['userAgent']}\n"
                         . "{$robot['action']}: {$robot['path']}\n";
-                })->join("\n")
-        )->header('Content-Type', 'text/plain');
+                })->join("\n"),
+            headers: [
+                'Content-Type' => 'text/plain',
+            ]
+        );
     }
 
 }
