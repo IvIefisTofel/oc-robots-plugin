@@ -2,6 +2,7 @@
 
 namespace AleksandrNovoselov\Robots\Classes;
 
+use Carbon\Carbon;
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 use Illuminate\Support\Collection;
@@ -113,7 +114,7 @@ class BotsAndCrawlers
                 }
             }
         });
-        \Cache::put(self::CACHE_KEY, $foundUserAgents->all(), \Date::now()->addMonth());
+        \Cache::put(self::CACHE_KEY, $foundUserAgents->all(), Carbon::now()->addMonth());
 
         return $foundUserAgents->all();
     }
